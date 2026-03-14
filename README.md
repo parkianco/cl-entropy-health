@@ -1,6 +1,11 @@
-# cl-entropy-health
+# Entropy Health
 
-NIST 800-90B entropy health testing for Common Lisp with zero external dependencies.
+Utility library providing specialized functionality for Common Lisp applications.
+
+## Features
+
+- Core functionality implementation
+- Pure Common Lisp (zero external dependencies)
 
 ## Installation
 
@@ -8,23 +13,27 @@ NIST 800-90B entropy health testing for Common Lisp with zero external dependenc
 (asdf:load-system :cl-entropy-health)
 ```
 
-## API
-
-- `(estimate-entropy data)` - Estimate min-entropy of byte sequence
-- `(min-entropy data)` - Calculate min-entropy in bits per byte
-- `(collision-test data)` - Perform collision test
-- `(compression-test data)` - Perform compression test
-- `(runs-test data)` - Perform runs test
-- `(excursion-test data)` - Perform excursion test
-- `(entropy-source-healthy-p data &key threshold)` - Check if entropy source is healthy
-
-## Example
+## Usage
 
 ```lisp
-(cl-entropy-health:entropy-source-healthy-p random-bytes :threshold 6.0) ; => T
-(cl-entropy-health:min-entropy random-bytes) ; => 7.89 (bits per byte)
+;; Example usage
+(main-function)
 ```
+
+## Testing
+
+```lisp
+(asdf:test-system :cl-entropy-health)
+```
+
+## API
+
+- `main-function - Primary function for core functionality`
 
 ## License
 
-BSD-3-Clause - Parkian Company LLC 2024-2026
+BSD-3-Clause License - See LICENSE file for details.
+
+---
+Copyright (c) 2024-2026 Parkian Company LLC. All rights reserved.
+SPDX-License-Identifier: BSD-3-Clause
