@@ -6,7 +6,10 @@
 
 (defpackage #:cl-entropy-health
   (:use #:cl)
-  (:export #:estimate-entropy
+  (:export
+   #:with-entropy-health-timing
+   #:entropy-health-batch-process
+   #:entropy-health-health-check#:estimate-entropy
            #:min-entropy
            #:collision-test
            #:compression-test

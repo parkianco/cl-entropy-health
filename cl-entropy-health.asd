@@ -6,13 +6,16 @@
 
 (asdf:defsystem #:cl-entropy-health
   :description "NIST 800-90B entropy health testing"
-  :author "Parkian Company LLC"
+  :author "Park Ian Co"
   :license "Apache-2.0"
   :version "0.1.0"
   :serial t
   :components ((:file "package")
                (:module "src"
-                :components ((:file "entropy")))))
+                :components ((:file "package")
+                             (:file "conditions" :depends-on ("package"))
+                             (:file "types" :depends-on ("package"))
+                             (:file "cl-entropy-health" :depends-on ("package" "conditions" "types")))))))
 
 (asdf:defsystem #:cl-entropy-health/test
   :description "Tests for cl-entropy-health"
