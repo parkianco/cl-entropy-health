@@ -7,7 +7,11 @@
 (defpackage #:cl-entropy-health
   (:use #:cl)
   (:export
-   #:with-entropy-health-timing
+   #:identity-list
+   #:flatten
+   #:map-keys
+   #:now-timestamp
+#:with-entropy-health-timing
    #:entropy-health-batch-process
    #:entropy-health-health-check#:estimate-entropy
            #:min-entropy
