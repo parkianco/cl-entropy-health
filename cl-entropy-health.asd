@@ -7,7 +7,7 @@
 (asdf:defsystem #:cl-entropy-health
   :description "NIST 800-90B entropy health testing"
   :author "Parkian Company LLC"
-  :license "BSD-3-Clause"
+  :license "Apache-2.0"
   :version "0.1.0"
   :serial t
   :components ((:file "package")
